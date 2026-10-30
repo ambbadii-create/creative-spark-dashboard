@@ -20,7 +20,7 @@ export function Select({ label, className, children, ...p }: SelectHTMLAttribute
   );
 }
 
-export function Field({ label, error, className, ...p }: InputHTMLAttributes<HTMLInputElement> & { label: string; error?: string | undefined }) {
+export function Field({ label, error, className, ...p }: InputHTMLAttributes<HTMLInputElement> & { label?: string | undefined; error?: string | undefined }) {
   return (
     <label className={cn("block text-xs font-medium text-muted-foreground", className)}>
       <span className="mb-1 block">{label}</span>
