@@ -209,8 +209,8 @@ function OrderDialog({ order, draft, onClose }: { order?: PurchaseOrder | undefi
                     </option>
                   ))}
                 </Select>
-                <Field label={i === 0 ? "Quantité" : undefined} type="number" min={1} value={l.quantity} onChange={(e) => setLine(i, { quantity: Number(e.target.value) })} />
-                <Field label={i === 0 ? "Coût unit. (DH)" : undefined} type="number" min={0} step="0.01" value={l.unitCost} onChange={(e) => setLine(i, { unitCost: Number(e.target.value) })} />
+                <Field label={i === 0 ? "Quantité" : ""} type="number" min={1} value={l.quantity} onChange={(e) => setLine(i, { quantity: Number(e.target.value) })} />
+                <Field label={i === 0 ? "Coût unit. (DH)" : ""} type="number" min={0} step="0.01" value={l.unitCost} onChange={(e) => setLine(i, { unitCost: Number(e.target.value) })} />
                 <button type="button" onClick={() => setF((x) => ({ ...x, lines: x.lines.filter((_, j) => j !== i) }))} className="mb-1 rounded-md p-1.5 text-muted-foreground hover:bg-destructive-soft hover:text-destructive">
                   <X className="h-4 w-4" />
                 </button>
